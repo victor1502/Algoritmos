@@ -1,0 +1,19 @@
+package plantillaAlgoritmos;
+
+import javax.swing.JPanel;
+
+public class HiloPlantilla 
+{
+	  static JPanel panel;
+	  int array[];
+	  
+	  public HiloPlantilla(JPanel panel, int[] array)
+	  {
+		        this.panel = panel;
+		        this.array = array;
+	  }
+		public void run()
+		{
+			  //Método de ordenación
+		}
+}

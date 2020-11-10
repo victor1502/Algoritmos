@@ -1,0 +1,88 @@
+package plantillaAlgoritmos;
+
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+
+public class MarcosPlantilla extends JFrame
+{
+
+	private JPanel panelAlgoritmo1;
+	int arrayAlgoritmo1[];
+
+
+
+	/**
+	 * Create the frame.
+	 */
+	public MarcosPlantilla()
+	{
+		inicializarComponentes();
+		iniciarArrays();
+	}
+	
+	private void inicializarComponentes()
+	{
+		//Hay que crear el array con los numeros.
+		
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 450, 300);
+		
+		
+		//Hay que poner tanto en horizontal como en vertical el Panel
+		
+		//Hay que crear el manejador del boton
+			Font fuente = new Font("Comic Sans MS",1,36);
+			SoftBevelBorder borde = new SoftBevelBorder(BevelBorder.RAISED);
+			
+			
+			//Le damos valores a la etiqueta
+			etiqueta.setFont(fuente);
+			etiqueta.setText("00:00:00");
+			etiqueta.setHorizontalAlignment(SwingConstants.CENTER);
+			etiqueta.setBorder(borde);
+			
+			//Le damos valores al bot�n de iniciar
+			fuente = new Font("Comic Sans MS",1,18);
+			
+			iniciar.setFont(fuente);
+			iniciar.setText("Iniciar");
+			//A�adimos un manejador de eventos, es decir, cuando hagamos click en el bot�n, haremos algo.
+			iniciar.addMouseListener(new MouseAdapter() 
+			{
+				public void mouseClicked(MouseEvent evt)
+				{
+					iniciarMouseClicked(evt);
+				}
+			});
+		
+		//Por último lo colocamos dentro del layout
+
+		
+	}
+	private void iniciarArrays()
+	{
+		//Generamos las matrices
+		
+		//Las ponemos dentro del panel, es decir, le añadimos al panel un botón con cada valor.
+	}
+	//Método manejador del botón, en el que se llamarán los métodos que vayamos a ejecutar
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					MarcosPlantilla frame = new MarcosPlantilla();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+}
